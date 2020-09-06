@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Board.gd" type="Script" id=2]
+
+[node name="Board" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Cards" type="Node2D" parent="."]
+
+[node name="Card1" parent="Cards" instance=ExtResource( 1 )]
+position = Vector2( 167.371, 207.332 )
+
+[node name="Card2" parent="Cards" instance=ExtResource( 1 )]
+position = Vector2( 409.139, 207.332 )
+
+[node name="Card3" parent="Cards" instance=ExtResource( 1 )]
+position = Vector2( 167.371, 438.536 )
+
+[node name="Card4" parent="Cards" instance=ExtResource( 1 )]
+position = Vector2( 409.139, 438.536 )
+
+[node name="Card5" parent="Cards" instance=ExtResource( 1 )]
+position = Vector2( 167.371, 667.198 )
+
+[node name="Card6" parent="Cards" instance=ExtResource( 1 )]
+position = Vector2( 409.139, 667.198 )
+
+[node name="Card7" parent="Cards" instance=ExtResource( 1 )]
+position = Vector2( 167.371, 897.01 )
+
+[node name="Card8" parent="Cards" instance=ExtResource( 1 )]
+position = Vector2( 409.139, 897.01 )
