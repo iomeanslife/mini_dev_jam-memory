@@ -1,12 +1,28 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Art/Square without details (outline)/elephant.png" type="Texture" id=1]
 [ext_resource path="res://Art/Square (outline)/elephant.png" type="Texture" id=2]
 [ext_resource path="res://Art/hidden.png" type="Texture" id=3]
 [ext_resource path="res://Card.gd" type="Script" id=4]
+[ext_resource path="res://PopStarEffect.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 99, 99 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "RevealedJiggle"
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 20, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -20, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 )
+}
 
 [node name="Card" type="Area2D"]
 script = ExtResource( 4 )
@@ -30,5 +46,12 @@ shape = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="JiggleAnimation" type="AnimationPlayer" parent="."]
+anims/RevealedJiggle = SubResource( 2 )
+
+[node name="PopStarEffect" parent="." instance=ExtResource( 5 )]
 [connection signal="input_event" from="." to="." method="_on_Card_input_event"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+[editable path="PopStarEffect"]

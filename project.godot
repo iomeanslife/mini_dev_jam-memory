@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="Memory"
 config/description="Simple memory game with animal pictures from a free asset pack."
-run/main_scene="res://Board.tscn"
+run/main_scene="res://MainMenu.tscn"
 config/icon="res://Art/parrot.png"
 
 [display]
@@ -43,4 +43,5 @@ press={
 
 [rendering]
 
+environment/default_clear_color=Color( 0.65, 0.5265, 0.65, 1 )
 environment/default_environment="res://default_env.tres"

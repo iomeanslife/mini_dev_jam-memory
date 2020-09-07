@@ -10,6 +10,8 @@ onready var spriteRevealed = $SpriteRevealed
 onready var spritePeek = $SpritePeek
 onready var spriteHidden = $SpriteHidden
 onready var timer = $Timer
+onready var jiggleAnimation = $JiggleAnimation
+onready var popStarEffectAnimation = $PopStarEffect/PopStarAnimation
 
 export var key = "elephant"
 export(State) var state setget set_state
@@ -30,6 +32,8 @@ func set_state(value):
 			spriteHidden.visible = false
 			spritePeek.visible = false
 			spriteRevealed.visible = true
+			jiggleAnimation.play("RevealedJiggle")
+			popStarEffectAnimation.play("StarPopping")
 			pass
 
 func hide_me():

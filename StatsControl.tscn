@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Font/LongCang-Regular.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 1 )
+
+[node name="StatsControl" type="Control"]
+margin_left = 148.0
+margin_right = 428.0
+margin_bottom = 89.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MissesLabel" type="Label" parent="."]
+margin_left = 2.0
+margin_right = 134.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 1 )
+text = "Misses:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MissesCountLabel" type="Label" parent="."]
+margin_left = 150.0
+margin_right = 268.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeLabel" type="Label" parent="."]
+margin_left = 2.0
+margin_top = 36.0
+margin_right = 134.0
+margin_bottom = 86.0
+custom_fonts/font = SubResource( 1 )
+text = "Time:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeCountLabel" type="Label" parent="."]
+margin_left = 150.0
+margin_top = 38.0
+margin_right = 268.0
+margin_bottom = 88.0
+custom_fonts/font = SubResource( 1 )
+text = "0"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
