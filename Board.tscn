@@ -8,10 +8,10 @@
 [ext_resource path="res://Art/restart_pressed.png" type="Texture" id=6]
 [ext_resource path="res://Art/restart.png" type="Texture" id=7]
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.619608, 0.776471, 0.858824, 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 80
 outline_size = 8
 outline_color = Color( 1, 0.533333, 1, 1 )
@@ -60,7 +60,7 @@ margin_left = 98.0
 margin_top = 195.0
 margin_right = 477.0
 margin_bottom = 826.0
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -72,7 +72,7 @@ margin_left = -132.0
 margin_top = 34.0
 margin_right = 132.0
 margin_bottom = 115.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "YOU WIN!"
 align = 1
 __meta__ = {

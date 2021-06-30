@@ -3,7 +3,7 @@
 [ext_resource path="res://Font/LongCang-Regular.ttf" type="DynamicFontData" id=1]
 
 [resource]
-size = 60
-outline_size = 3
+size = 140
+outline_size = 8
 outline_color = Color( 0.627451, 0.764706, 0.866667, 1 )
 font_data = ExtResource( 1 )
